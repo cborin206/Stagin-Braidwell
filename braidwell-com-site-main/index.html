@@ -81,7 +81,6 @@ gtag('config', 'G-4G09EGBVZ3');</script>
       </div>
 
       <div class="video absolute top-0 left-0 w-full h-full">
-            <div class="video-overlay"></div>
             
             <video class="object-cover absolute top-0 left-0 w-full h-full active playsinline" autoplay muted loop data-autoplay playsinline poster="wp-content/uploads/2022/03/AnimationStill_Option5-1536x864.jpg">
                   <source src="wp-content/uploads/2022/03/homepage1.mp4" type="video/mp4">
@@ -560,23 +559,24 @@ gtag('config', 'G-4G09EGBVZ3');</script>
   }
 
   /* Last slide video overlay */
-  .video-overlay {
+  .last-slide-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.5);
     pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 10;
+    z-index: 0;
   }
-  body.is-last .video-overlay {
-    opacity: 1;
+  .last-slide .content,
+  .last-slide footer {
+    position: relative;
+    z-index: 1;
   }
 </style>
                         <section class="section w-full h-full relative last-slide">
+                  <div class="last-slide-overlay"></div>
                   <div class="content flex justify-center items-center w-full">
                         <div class="text-content">
                               <p>We seek to <strong>serve</strong> our partners with unique <strong>capability</strong>, <strong>determination</strong>, <strong>creativity</strong>, and <strong>humility</strong> to accelerate our <strong>collective fight against disease</strong>.</p>
