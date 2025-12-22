@@ -13,7 +13,7 @@ var initFullpage = function initFullpage() {
     scrollingSpeed: 600,
     navigation: true,
     navigationPosition: 'left',
-    anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
+    anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6', 'slide-7'],
     fixedElements: '#cookie-law-info-bar, .cli-modal-content.cli-bar-popup',
     scrollOverflow: true,
     onLeave: function onLeave(origin, destination) {
