@@ -13,7 +13,7 @@ var initFullpage = function initFullpage() {
     scrollingSpeed: 600,
     navigation: true,
     navigationPosition: 'left',
-    anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
+    anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6', 'slide-7'],
     fixedElements: '#cookie-law-info-bar, .cli-modal-content.cli-bar-popup',
     scrollOverflow: true,
     onLeave: function onLeave(origin, destination) {
@@ -26,15 +26,52 @@ var initFullpage = function initFullpage() {
         document.body.classList.remove('is-last');
       }
 
+      // Co-founders slide (index 5) - position video at bottom in landscape
+      var isLandscape = window.matchMedia("(orientation: landscape) and (max-width: 991px)").matches;
+      if (destination.index === 5 && isLandscape && nextVideo) {
+        nextVideo.style.objectPosition = 'center bottom';
+      } else if (nextVideo) {
+        nextVideo.style.objectPosition = '';
+      }
+
       if (actualVideo) {
         actualVideo.classList.remove('active');
+        actualVideo.style.objectPosition = '';
         actualVideo.pause();
       }
       if (nextVideo) {
         nextVideo.classList.add('active');
         nextVideo.play();
       }
+    },
+    afterLoad: function afterLoad(origin, destination) {
+      var currentVideo = $('video')[destination.index];
+      var isLandscape = window.matchMedia("(orientation: landscape) and (max-width: 991px)").matches;
+      
+      // Co-founders slide (index 5) - position video at bottom in landscape
+      if (destination.index === 5 && isLandscape && currentVideo) {
+        currentVideo.style.objectPosition = 'center bottom';
+      }
     }
+  });
+
+  // Handle orientation change for co-founders video positioning
+  window.addEventListener('orientationchange', function() {
+    setTimeout(function() {
+      var activeSection = document.querySelector('.fp-section.active');
+      var sections = document.querySelectorAll('.fp-section');
+      var activeIndex = Array.from(sections).indexOf(activeSection);
+      var video = $('video')[activeIndex];
+      var isLandscape = window.matchMedia("(orientation: landscape) and (max-width: 991px)").matches;
+      
+      if (activeIndex === 5 && video) {
+        if (isLandscape) {
+          video.style.objectPosition = 'center bottom';
+        } else {
+          video.style.objectPosition = '';
+        }
+      }
+    }, 100);
   });
 };
 
