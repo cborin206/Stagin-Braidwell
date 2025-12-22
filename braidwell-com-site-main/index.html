@@ -98,7 +98,7 @@ gtag('config', 'G-4G09EGBVZ3');</script>
                         <video class="object-cover absolute top-0 left-0 w-full h-full playsinline" autoplay muted loop data-autoplay playsinline poster="wp-content/uploads/2022/03/AnimationStill_Option4-1536x864.jpg">
                   <source src="wp-content/uploads/2022/03/homepage5.mp4" type="video/mp4">
             </video>
-                        <video class="object-cover absolute top-0 left-0 w-full h-full playsinline" autoplay muted loop data-autoplay playsinline poster="wp-content/uploads/2022/03/AnimationStill_Option4-1536x864.jpg">
+                        <video class="absolute left-0 w-full h-full playsinline video-bottom" style="object-fit: contain; object-position: center bottom; bottom: 0; top: auto;" autoplay muted loop data-autoplay playsinline poster="wp-content/uploads/2022/03/AnimationStill_Option4-1536x864.jpg">
                   <source src="wp-content/uploads/2022/03/Option_06.mp4" type="video/mp4">
             </video>
                   </div>
@@ -127,28 +127,38 @@ gtag('config', 'G-4G09EGBVZ3');</script>
                   </div>
                               </section>
                         <style>
-  .text-content-scaled {
-    font-size: clamp(1rem, 3.5vw, 4rem) !important;
-    line-height: 140% !important;
+  .text-content-95 {
+    width: 100%;
+  }
+  .text-content-95 p {
+    transform: scale(0.75);
+    transform-origin: left center;
+    width: 133.33%; /* 100% / 0.75 to compensate for scale */
   }
 </style>
 <section class="section w-full h-full relative">
                   <div class="content flex justify-center items-center w-full">
-                        <div class="text-content text-content-scaled">
+                        <div class="text-content text-content-95">
                               <p>Powered by a <strong>seasoned team</strong>, Braidwell capitalizes on the <strong>combined learned experience</strong> of a <strong>close-knit group of leaders</strong> in investment research, medical science, biostatistics, commercial analysis, financial structuring, data science, artificial intelligence, and portfolio engineering.</p>
-                              <br>
-                              <p>We share a deep commitment to <strong>removing barriers</strong> to healthcare and <strong>advancing rapid progress</strong> in science and medicine. Technology today is quickly reshaping healthcare and life sciences towards this goal. Braidwell is positioned to <strong>meet the moment</strong> and turn <strong>discovery into impact</strong>.</p>
                         </div>
                   </div>
                               </section>
                         <section class="section w-full h-full relative">
-                  <div class="content co-founders-header-content">
-                        <div class="text-content">
-                              <p><strong>Co-Founders</strong></p>
+                  <div class="content flex justify-center items-center w-full">
+                        <div class="text-content text-content-95">
+                              <p>We share a deep commitment to <strong>removing barriers</strong> to healthcare and <strong>advancing rapid progress</strong> in science and medicine. Technology today is quickly reshaping healthcare and life sciences towards this goal. Braidwell is positioned to <strong>meet the moment</strong> and turn <strong>discovery into impact</strong>.</p>
                         </div>
                   </div>
-                  <div class="content flex justify-center items-center w-full h-full">
+                              </section>
+                        <section class="section w-full h-full relative co-founders-section">
+                  <div class="content co-founders-header-content">
+                        <div class="text-content">
+                              <h1><strong>Co-Founders</strong></h1>
+                        </div>
+                  </div>
+                  <div class="content flex justify-center items-center w-full h-full co-founders-main-content">
                         <div class="co-founders-container">
+                              <div class="co-founders-wrapper">
                               <div class="co-founders-grid">
                                     <div class="co-founder" onclick="openBioModal('alex')">
                                           <div class="co-founder-image">
@@ -168,6 +178,7 @@ gtag('config', 'G-4G09EGBVZ3');</script>
                                                 <p>Chief Executive Officer, Partner, Co-Founder</p>
                                           </div>
                                     </div>
+                              </div>
                               </div>
                         </div>
                   </div>
@@ -221,39 +232,47 @@ gtag('config', 'G-4G09EGBVZ3');</script>
   .co-founders-header-content {
     position: absolute !important;
     top: 4rem !important;
-    left: 0 !important;
-    right: 0 !important;
-    display: flex !important;
-    justify-content: flex-start !important;
-    align-items: flex-start !important;
+    left: calc(16.5vw - 24px) !important;
+    transform: none !important;
+    width: auto !important;
   }
   .co-founders-header-content .text-content {
-    padding-top: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .co-founders-header-content .text-content p {
+    text-align: left !important;
+    margin: 0 !important;
   }
   .co-founders-grid {
     display: flex;
     justify-content: center;
-    gap: 6rem;
+    gap: 4rem;
   }
   .co-founder {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.3);
-    width: 320px;
+    align-items: stretch;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 100%);
+    width: 420px;
     cursor: pointer;
+    gap: 0;
   }
   .co-founder-image {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 320px;
+    display: block;
+    height: 420px;
+    line-height: 0;
+    overflow: hidden;
   }
   .co-founder-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
     filter: grayscale(100%);
     display: block;
+    margin: 0;
+    padding: 0;
   }
   .co-founder-info {
     background: rgba(0, 0, 0, 1);
@@ -262,6 +281,7 @@ gtag('config', 'G-4G09EGBVZ3');</script>
     width: 100%;
     min-height: 100px;
     box-sizing: border-box;
+    margin-top: 0;
   }
   .co-founder-info h3 {
     font-size: 4rem;
@@ -443,82 +463,80 @@ gtag('config', 'G-4G09EGBVZ3');</script>
     }
   }
 
-  /* Co-founders responsive - keep horizontal, scale down */
+  /* Co-founders responsive */
   @media screen and (max-width: 991px) {
+    .section {
+      overflow: hidden;
+    }
+    .co-founders-wrapper {
+      padding: 0 2.5rem;
+    }
+    .co-founders-section .co-founders-header-content {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      width: 90vw !important;
+      height: auto !important;
+      margin-top: -25vh; /* Offset to position title above center */
+    }
+    .co-founders-section .co-founders-main-content {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+      width: 100% !important;
+      height: auto !important;
+      margin-top: 5vh; /* Offset to position grid below title */
+    }
+    .co-founders-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .co-founders-grid {
-      gap: 3rem;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
     }
     .co-founder {
-      width: 240px;
+      flex-direction: row;
+      width: calc(100vw - 5rem);
+      max-width: 500px;
+      align-items: stretch;
+      background: rgba(0, 0, 0, 1);
     }
     .co-founder-image {
-      height: 240px;
+      width: 45%;
+      height: auto;
+      flex-shrink: 0;
+      background: rgba(0, 0, 0, 1);
+    }
+    .co-founder-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
     }
     .co-founder-info {
-      min-height: 80px;
+      width: 55%;
+      min-width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .co-founder-info h3 {
-      font-size: 1.8rem;
+      font-size: 2.4rem;
     }
     .co-founder-info p {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
     }
   }
 
   @media screen and (max-width: 640px) {
-    .co-founders-grid {
-      gap: 1.5rem;
-    }
     .co-founder {
-      width: 160px;
-    }
-    .co-founder-image {
-      height: 160px;
-    }
-    .co-founder-info {
-      padding: 1rem;
-      min-height: 70px;
-    }
-    .co-founder-info h3 {
-      font-size: 1.4rem;
-    }
-    .co-founder-info p {
-      font-size: 0.9rem;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .co-founders-grid {
-      gap: 1rem;
-    }
-    .co-founder {
-      width: 140px;
-    }
-    .co-founder-image {
-      height: 140px;
-    }
-    .co-founder-info {
-      padding: 0.8rem;
-      min-height: 60px;
-    }
-    .co-founder-info h3 {
-      font-size: 1.2rem;
-    }
-    .co-founder-info p {
-      font-size: 0.8rem;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    .co-founders-grid {
-      flex-direction: column;
-      gap: 3rem;
-      align-items: center;
-    }
-    .co-founder-image img {
-      width: 220px;
-    }
-    .co-founder-info {
-      min-width: 200px;
+      width: calc(100vw - 5rem);
+      max-width: 400px;
     }
     .co-founder-info h3 {
       font-size: 2rem;
@@ -527,16 +545,107 @@ gtag('config', 'G-4G09EGBVZ3');</script>
       font-size: 1.2rem;
     }
   }
-  @media screen and (max-width: 640px) {
-    .co-founder-image img {
-      width: 180px;
+
+  @media screen and (max-width: 480px) {
+    .co-founder-info h3 {
+      font-size: 1.8rem;
+    }
+    .co-founder-info p {
+      font-size: 1rem;
+    }
+  }
+
+  /* Landscape mode - horizontal cards */
+  @media screen and (max-width: 991px) and (orientation: landscape) {
+    .co-founders-section .co-founders-header-content {
+      margin-top: -35vh;
+    }
+    .co-founders-section .co-founders-main-content {
+      margin-top: 10vh;
+    }
+    .co-founders-grid {
+      flex-direction: row;
+      gap: 2rem;
+    }
+    .co-founder {
+      flex-direction: column;
+      width: 40vw;
+      max-width: 280px;
+    }
+    .co-founder-image {
+      width: 100%;
+      height: auto;
     }
     .co-founder-info {
-      padding: 1rem 1.5rem;
-      min-width: 160px;
+      width: 100%;
     }
     .co-founder-info h3 {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+    }
+    .co-founder-info p {
+      font-size: 1rem;
+    }
+    /* Position 6th video at bottom in landscape when on co-founders slide */
+    body.is-cofounders .video video.active {
+      object-position: center bottom !important;
+    }
+  }
+  
+  /* Force 6th video to bottom for co-founders slide - all screen sizes */
+  .video video.video-bottom {
+    object-position: center bottom !important;
+  }
+  video.video-bottom {
+    object-position: center bottom !important;
+  }
+  .video-bottom {
+    object-position: center bottom !important;
+  }
+
+  /* Reduce fullPage.js navigation dot height */
+  #fp-nav ul li a span,
+  .fp-nav ul li a span,
+  #fp-nav li a span,
+  .fp-nav li a span {
+    height: 48px !important;
+  }
+  #fp-nav ul li a.active span,
+  #fp-nav ul li:hover a.active span,
+  .fp-nav ul li a.active span,
+  .fp-nav ul li:hover a.active span {
+    height: 48px !important;
+  }
+  #fp-nav ul li,
+  .fp-nav ul li {
+    height: 56px !important;
+  }
+
+  /* Landscape orientation - horizontal cards */
+  @media screen and (max-width: 991px) and (orientation: landscape) {
+    .co-founders-section .co-founders-header-content {
+      margin-top: -35vh;
+    }
+    .co-founders-section .co-founders-main-content {
+      margin-top: 10vh;
+    }
+    .co-founders-grid {
+      flex-direction: row !important;
+      gap: 2rem;
+    }
+    .co-founder {
+      flex-direction: column;
+      width: auto;
+      max-width: 45%;
+    }
+    .co-founder-image {
+      width: 100%;
+      height: 150px;
+    }
+    .co-founder-info {
+      width: 100%;
+    }
+    .co-founder-info h3 {
+      font-size: 1.8rem;
     }
     .co-founder-info p {
       font-size: 1rem;
@@ -752,6 +861,39 @@ document.addEventListener('keydown', function(e) {
     });
     document.body.style.overflow = '';
   }
+});
+
+// Adjust video position for co-founders slide (slide 6) in landscape
+function adjustVideoForLandscape() {
+  var videos = document.querySelectorAll('.video video');
+  var isLandscape = window.matchMedia("(orientation: landscape) and (max-width: 991px)").matches;
+  var coFoundersSection = document.querySelector('.co-founders-section');
+  
+  if (coFoundersSection && coFoundersSection.classList.contains('active')) {
+    if (isLandscape && videos[5]) {
+      videos[5].style.objectPosition = 'center bottom';
+    }
+  }
+  
+  // Reset other videos
+  videos.forEach(function(video, index) {
+    if (index !== 5 || !isLandscape) {
+      video.style.objectPosition = '';
+    }
+  });
+}
+
+// Run on orientation change and resize
+window.addEventListener('resize', adjustVideoForLandscape);
+window.addEventListener('orientationchange', adjustVideoForLandscape);
+
+// Also observe for slide changes using MutationObserver
+var observer = new MutationObserver(function(mutations) {
+  adjustVideoForLandscape();
+});
+
+document.querySelectorAll('.section').forEach(function(section) {
+  observer.observe(section, { attributes: true, attributeFilter: ['class'] });
 });
 </script>
 <!-- Cloudflare Pages Analytics --><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src='https://static.cloudflareins
